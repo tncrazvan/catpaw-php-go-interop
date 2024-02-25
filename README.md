@@ -13,7 +13,7 @@ Then run the Php program
 composer prod:start
 ```
 
-You should see the following iny our terminal
+You should see the following in your terminal
 
 ```log
 > @php -dopcache.enable_cli=1 -dopcache.jit_buffer_size=100M ./bin/start --libraries='./src/lib' --entry='./src/main.php'
