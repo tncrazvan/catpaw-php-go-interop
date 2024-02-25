@@ -43,3 +43,8 @@ func compress(fileName string) {
 	fmt.Println("closing zip archive...")
 	zipWriter.Close()
 }
+
+//export hello
+func hello(name string) {
+	println("hello " + name)
+}
