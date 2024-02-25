@@ -6,6 +6,11 @@ cd src && \
 go build -o main.so -buildmode=c-shared main.go && \
 cpp -P ./main.h ./main.static.h
 ```
+Pull your Php dependencies
+
+```sh
+composer update
+```
 
 Then run the Php program
 
