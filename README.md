@@ -2,9 +2,8 @@
 
 Compile the Go program with
 ```sh
-cd src && \
-go build -o main.so -buildmode=c-shared main.go && \
-cpp -P ./main.h ./main.static.h
+go build -o src/main.so -buildmode=c-shared src/main.go && \
+cpp -P ./src/main.h ./src/main.static.h
 ```
 Pull your Php dependencies
 
