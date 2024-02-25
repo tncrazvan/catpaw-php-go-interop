@@ -51,5 +51,5 @@ func hello(name string) string {
     return "hello " + name
 }
 ```
-You can still retrieve the result though, it will return your a structure like this one
+You can still retrieve the result though, it will return your a structure like this one (aka a slice)
 https://github.com/tncrazvan/catpaw-php-go-interop/blob/36f3c28ac10088fbca16a8b2def55163114fb405/src/main.static.h#L8
