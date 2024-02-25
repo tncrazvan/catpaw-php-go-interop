@@ -74,7 +74,7 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-extern void hello(GoString name);
+extern void compress(GoString fileName);
 
 #ifdef __cplusplus
 }

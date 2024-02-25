@@ -8,11 +8,11 @@ use CatPaw\Core\Unsafe;
 
 interface Contract {
     /**
-     * 
-     * @param  string       $name
+     * Create a `.zip` file from any file.
+     * @param  string       $fileName file to compress.
      * @return Unsafe<void>
      */
-    function hello(string $name):Unsafe;
+    function compress(string $fileName):Unsafe;
 }
 
 function main():Unsafe {
@@ -20,7 +20,7 @@ function main():Unsafe {
         $goffi = goffi(Contract::class, asFileName(__DIR__, './main.so'))
             ->try($error) or yield $error;
 
-        $goffi->hello("world")
+        $goffi->compress(asFileName(__DIR__, './main.php'))
             ->try($error) or yield $error;
     });
 }

@@ -27,4 +27,4 @@ typedef void *GoMap;
 typedef void *GoChan;
 typedef struct { void *t; void *v; } GoInterface;
 typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
-extern void hello(GoString name);
+extern void compress(GoString fileName);
