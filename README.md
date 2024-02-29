@@ -28,7 +28,6 @@ hello world
 
 This has been tested on
 ```log
-No LSB modules are available.
 Distributor ID:	Zorin
 Description:	Zorin OS 17
 Release:	17
