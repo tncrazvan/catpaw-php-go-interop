@@ -2,8 +2,10 @@
 
 Compile the Go program with
 ```sh
-go build -o src/main.so -buildmode=c-shared src/main.go && \
-cpp -P ./src/main.h ./src/main.static.h
+pushd src/lib/goffi && \
+go build -o main.so -buildmode=c-shared main.go && \
+cpp -P ./main.h ./main.static.h && \
+popd
 ```
 Pull your Php dependencies
 
@@ -40,15 +42,3 @@ Currently only the following primitives are automatically converted from Php to 
 - int
 - float
 - bool
-
-However Go primitives are not converted yet to Php primitives, although int, float and bool should not require any conversion, only Go strings are a bit less straightforward (I will fix this in the future).
-
-
-Basically Php doesn't understand the return of this function yet
-```go
-func hello(name string) string {
-    return "hello " + name
-}
-```
-You can still retrieve the result though, it will return you a structure like this one (aka a slice)
-https://github.com/tncrazvan/catpaw-php-go-interop/blob/36f3c28ac10088fbca16a8b2def55163114fb405/src/main.static.h#L8
