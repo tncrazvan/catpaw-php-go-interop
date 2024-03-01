@@ -3,6 +3,8 @@
 *.exe
 *.pem
 *.phar
+*.h
+*.so
 /.settings
 /.history
 /.idea
@@ -23,5 +25,3 @@
 /package-lock.json
 /.php-cs-fixer.cache
 /.phpunit.result.cache
-/src/*.so
-/src/*.h
