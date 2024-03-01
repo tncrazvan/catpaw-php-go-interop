@@ -42,3 +42,10 @@ Currently only the following primitives are automatically converted from Php to 
 - int
 - float
 - bool
+
+# Gui (Experimental)
+
+There's also an experimental gui example in this repo, just uncomment this line 
+https://github.com/tncrazvan/catpaw-php-go-interop/blob/6fddfae69d66d92c6901b8a656c97157740f959a/src/main.php#L27
+and run the program again, the result should look something like this
+![Peek 2024-03-01 23-52](https://github.com/tncrazvan/catpaw-php-go-interop/assets/6891346/598d5d4a-1787-4b6c-83ec-446cc063c5ba)
