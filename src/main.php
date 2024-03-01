@@ -9,17 +9,10 @@ use CatPaw\Core\Unsafe;
 interface Contract {
     /**
      * Create a `.zip` file from any file.
-     * @param  string       $fileName file to compress.
-     * @return Unsafe<void>
      */
-    function compress(string $fileName):Unsafe;
+    function compress(string $fileName):void;
 
-    /**
-     * 
-     * @param  string       $name
-     * @return Unsafe<void>
-     */
-    function hello(string $name):Unsafe;
+    function hello(string $name):void;
 }
 
 function main():Unsafe {
@@ -31,7 +24,6 @@ function main():Unsafe {
         // $goffi->compress(asFileName(__DIR__, './main.php'))
         //     ->try($error) or yield $error;
 
-        $goffi->hello('world')
-            ->try($error) or yield $error;
+        $goffi->hello('world');
     });
 }
