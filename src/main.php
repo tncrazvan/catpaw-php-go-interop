@@ -11,7 +11,7 @@ interface Contract {
      */
     function compress(string $fileName):void;
 
-    function hello(string $name):void;
+    function hello(string $name):string;
 
     function window():void;
 }
@@ -24,8 +24,8 @@ function main():Unsafe {
         
         // $goffi->compress(asFileName(__DIR__, './main.php'));
         
-        // $goffi->window();
+        $goffi->window();
 
-        $goffi->hello('world');
+        // echo $goffi->hello('world').PHP_EOL;
     });
 }

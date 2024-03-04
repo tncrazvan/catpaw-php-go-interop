@@ -16,7 +16,8 @@ import (
 )
 
 //export compress
-func compress(fileName string) {
+func compress(fileNameC *C.char) {
+	fileName := C.GoString(fileNameC)
 
 	// I have sampled the following code from here: https://golang.cafe/blog/golang-zip-file-example.html
 	// and made some minor modifications.
@@ -49,8 +50,9 @@ func compress(fileName string) {
 }
 
 //export hello
-func hello(name string) {
-	println("hello " + name)
+func hello(nameC *C.char) *C.char {
+	name := C.GoString(nameC)
+	return C.CString("hello " + name)
 }
 
 //export window
