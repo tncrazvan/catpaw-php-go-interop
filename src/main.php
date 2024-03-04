@@ -24,8 +24,8 @@ function main():Unsafe {
         
         // $goffi->compress(asFileName(__DIR__, './main.php'));
         
-        $goffi->window();
+        // $goffi->window();
 
-        // echo $goffi->hello('world').PHP_EOL;
+        echo $goffi->hello('world').PHP_EOL;
     });
 }
